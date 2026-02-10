@@ -45,6 +45,12 @@ VideoEditor_Rust는 현대적인 웹 기술(React, Ant Design)과 강력한 시�
 -   [Rust](https://www.rust-lang.org/) (최신 stable 버전)
 -   Visual Studio Build Tools (C++ 데스크톱 개발)
 
+### FFmpeg 설정 (필수)
+-   이 프로젝트는 비디오 처리를 위해 **FFmpeg**가 필요합니다.
+-   [FFmpeg 다운로드](https://ffmpeg.org/download.html) 페이지에서 Windows용 `ffmpeg.exe`를 다운로드하세요.
+-   다운로드한 파일의 이름을 **`ffmpeg-x86_64-pc-windows-msvc.exe`** 로 변경합니다.
+-   **`src-tauri/`** 폴더 바로 아래에 해당 파일을 위치시킵니다.
+
 ### 개발 모드 실행
 소스 코드를 수정하며 테스트할 수 있습니다.
 ```bash
@@ -69,8 +75,8 @@ VideoEditor_Rust/
 │   └── App.tsx         # 메인 앱 진입점
 ├── src-tauri/          # Rust 백엔드 소스
 │   ├── src/            # Rust 코드 logic (ffmpeg 명령어 처리 등)
-│   ├── binaries/       # FFmpeg 실행 파일 (Sidecar)
-│   └── tauri.conf.json # Tauri 설정 파일
+│   ├── tauri.conf.json # Tauri 설정 파일
+│   └── ffmpeg-x86_64-pc-windows-msvc.exe # FFmpeg 실행 파일 (Sidecar)
 └── package.json        # 프로젝트 의존성 및 스크립트
 ```
 
